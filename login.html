@@ -29,15 +29,27 @@
     </div>
 
     <!-- BODY -->
-    <body onload="onLoad()">
+    <body>
+
         <main onclick="onFocusMain()">
 
-            
-            <h2>Profile Name:</h2>
-            <p class="profile_name"></p>
-
+            <div id="g_id_onload"
+                data-client_id="890705592007-767mqpnqd9u80dslp2g5hab1jj58krlp.apps.googleusercontent.com"
+                data-auto_prompt="true"
+                data-callback="handleCredentialResponse">
+            </div>
+            <div class="g_id_signin"
+                data-type="standard"
+                data-size="large"
+                data-theme="filled_blue"
+                data-text="sign_in_with"
+                data-shape="pill"
+                data-logo_alignment="left"
+                data-width="100"
+                style="padding-top: 20px; padding-left: 40%;">
+            </div>
 
         </main>
-    </body>
+    </body onload="onLoad()">
 </html>
 

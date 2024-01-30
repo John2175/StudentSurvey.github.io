@@ -37,22 +37,51 @@ function handleCredentialResponse(response) {
   console.log("Email: " + responsePayload.email);
   
   localStorage.setItem("id",id_store);
-  console.log("set id")
   localStorage.setItem("prof_name",name_store);
   localStorage.setItem("prof_pic",img_store);
 
+  window.location.href = "account.html";
+
   prof_name = document.getElementsByClassName("profile_name")
   prof_pic = document.getElementsByClassName("profile_pic")
-  for(var i = 0; i < prof_name.length; i++){
-    prof_name[i].innerText=responsePayload.name;   
-    prof_pic[i].src=responsePayload.picture;
-    }
+
 }
 
 
+function onLoad()
+{
+  if(localStorage.getItem("id"))
+  {
+    prof_name = document.getElementsByClassName("profile_name")
+    prof_pic = document.getElementsByClassName("profile_pic")
+    
+    for(var i = 0; i < prof_name.length; i++)
+    {
+      prof_name[i].innerText=localStorage.getItem("prof_name");   
+    }
+    for(var i = 0; i < prof_pic.length; i++)
+    {
+      prof_pic[i].src=localStorage.getItem("prof_pic");
+    }
+    
+    console.log("loaded")
+  }
+  console.log("not")
+}
 
 
-
+function directAccount()
+{
+  var id_check = localStorage.getItem("id")
+  if(id_check)
+  { 
+    window.location.href = "account.html" ; 
+  }
+  else
+  { 
+    window.location.href = "login.html" ;  
+  }
+}
 
 
 

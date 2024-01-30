@@ -103,3 +103,13 @@ p {
   top: 20px;
   right: 20px;
   }
+
+ .survey_entry {
+    width: 75%; 
+    background-color: white; 
+    height: 80px; 
+    margin-top: 20px;
+    position:relative;
+    margin-left: 12%;
+    border-radius: 2%;
+ }

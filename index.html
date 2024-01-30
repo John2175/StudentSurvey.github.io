@@ -1,3 +1,8 @@
+
+<!-- SCRIPTS -->
+<script src="script.js"></script>
+<script src="https://accounts.google.com/gsi/client" async></script>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,22 +17,20 @@
     <!-- HEADER / MENU -->
     <header>
     <div class="menu-icon" onclick="toggleMenu()" display="">☰</div>
+    <div><img class="profile_pic" src="" style="border-radius: 50%;"></div>
     <h1> Student Survey Sphere </h1>
     </header>
 
     <!-- SIDE MENU -->
     <div class="menu" id="myMenu">
         <a href="index.html">Home</a>
-        <a href="account.html">Account</a>
+        <a href="dash.html">Dash</a>
+        <a onclick ="directAccount()">Account</a>
     </div>
-
-    <!-- SCRIPTS -->
-    <script src="script.js"></script>
-    <script src="https://accounts.google.com/gsi/client" async></script>
 
 
   <!-- BODY -->
-  <body>
+  <body onload="onLoad()">
       <main onclick="onFocusMain()">
 
         <div class= "about">
