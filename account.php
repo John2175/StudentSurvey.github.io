@@ -27,8 +27,8 @@ console.log("here");
 
     <!-- SIDE MENU -->
     <div class="menu" id="myMenu">
-        <a href="home.html">Home</a>
-        <a href="account.html">Account</a>
+        <a href="index.html">Home</a>
+        <a href="account.php">Account</a>
     </div>
 
     <!-- SCRIPTS -->
