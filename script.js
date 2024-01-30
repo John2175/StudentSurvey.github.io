@@ -19,16 +19,6 @@ function decodeJwtResponse(token) {
   return JSON.parse(jsonPayload);
 }
 
-function onSignIn(responsePayload){
-  localStorage.setItem("id",document.getElementsByClassName("sub"));
-  console.log("set id")
-  localStorage.setItem("prof_name",document.getElementsByClassName("profile_name"));
-  localStorage.setItem("prof_pic",document.getElementsByClassName("profile_pic"));
-  for(var i = 0; i < name.length; i++){
-    prof_name[i].innerText=responsePayload.name;   
-    prof_pic[i].src=responsePayload.picture;
-    }
-}
 
 function handleCredentialResponse(response) {
   // decodeJwtResponse() is a custom function defined by you
@@ -41,7 +31,15 @@ function handleCredentialResponse(response) {
   console.log('Family Name: ' + responsePayload.family_name);
   console.log("Image URL: " + responsePayload.picture);
   console.log("Email: " + responsePayload.email);
-  onSignIn(responsePayload);
+  
+  localStorage.setItem("id",document.getElementsByClassName("sub"));
+  console.log("set id")
+  localStorage.setItem("prof_name",document.getElementsByClassName("profile_name"));
+  localStorage.setItem("prof_pic",document.getElementsByClassName("profile_pic"));
+  for(var i = 0; i < name.length; i++){
+    prof_name[i].innerText=responsePayload.name;   
+    prof_pic[i].src=responsePayload.picture;
+    }
 }
 
 
