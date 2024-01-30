@@ -1,3 +1,7 @@
+var id; 
+var prof_name = document.getElementsByClassName("profile_name");
+var prof_pic = document.getElementsByClassName("profile_pic");
+
 
 
 function decodeJwtResponse(token) {
@@ -16,14 +20,14 @@ function decodeJwtResponse(token) {
 }
 
 function onSignIn(responsePayload){
-  var name = document.getElementsByClassName("profile_name");
-  var pic = document.getElementsByClassName("profile_pic");
+  id = document.getElementsByClassName("sub");
+  prof_name = document.getElementsByClassName("profile_name");
+  prof_pic = document.getElementsByClassName("profile_pic");
   for(var i = 0; i < name.length; i++){
-    name[i].innerText=responsePayload.name;   
-    pic[i].src=responsePayload.picture;
+    prof_name[i].innerText=responsePayload.name;   
+    prof_pic[i].src=responsePayload.picture;
     }
 }
-
 
 function handleCredentialResponse(response) {
   // decodeJwtResponse() is a custom function defined by you
