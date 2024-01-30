@@ -1,6 +1,6 @@
 var id; 
-var prof_name = document.getElementsByClassName("profile_name");
-var prof_pic = document.getElementsByClassName("profile_pic");
+var prof_name;
+var prof_pic;
 
 
 
