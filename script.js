@@ -32,10 +32,10 @@ function handleCredentialResponse(response) {
   console.log("Image URL: " + responsePayload.picture);
   console.log("Email: " + responsePayload.email);
   
-  localStorage.setItem("id",document.getElementsByClassName("sub"));
+  localStorage.setItem("id",responsePayload.sub);
   console.log("set id")
-  localStorage.setItem("prof_name",document.getElementsByClassName("profile_name"));
-  localStorage.setItem("prof_pic",document.getElementsByClassName("profile_pic"));
+  localStorage.setItem("prof_name",responsePayload.name);
+  localStorage.setItem("prof_pic",responsePayload.picture);
   for(var i = 0; i < name.length; i++){
     prof_name[i].innerText=responsePayload.name;   
     prof_pic[i].src=responsePayload.picture;
