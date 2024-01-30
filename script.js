@@ -25,6 +25,10 @@ function handleCredentialResponse(response) {
   // to decode the credential response.
   const responsePayload = decodeJwtResponse(response.credential);
 
+  var id_store = responsePayload.sub;
+  var name_store = responsePayload.name;
+  var img_store = responsePayload.picture;
+
   console.log("ID: " + responsePayload.sub);
   console.log('Full Name: ' + responsePayload.name);
   console.log('Given Name: ' + responsePayload.given_name);
@@ -32,11 +36,14 @@ function handleCredentialResponse(response) {
   console.log("Image URL: " + responsePayload.picture);
   console.log("Email: " + responsePayload.email);
   
-  localStorage.setItem("id",responsePayload.sub);
+  localStorage.setItem("id",id_store);
   console.log("set id")
-  localStorage.setItem("prof_name",responsePayload.name);
-  localStorage.setItem("prof_pic",responsePayload.picture);
-  for(var i = 0; i < name.length; i++){
+  localStorage.setItem("prof_name",name_store);
+  localStorage.setItem("prof_pic",img_store);
+
+  prof_name = document.getElementsByClassName("profile_name")
+  prof_pic = document.getElementsByClassName("profile_pic")
+  for(var i = 0; i < prof_name.length; i++){
     prof_name[i].innerText=responsePayload.name;   
     prof_pic[i].src=responsePayload.picture;
     }
