@@ -20,9 +20,9 @@ function decodeJwtResponse(token) {
 }
 
 function onSignIn(responsePayload){
-  id = document.getElementsByClassName("sub");
-  prof_name = document.getElementsByClassName("profile_name");
-  prof_pic = document.getElementsByClassName("profile_pic");
+  localStorage.setItem("id",document.getElementsByClassName("sub"));
+  localStorage.setItem("prof_name",document.getElementsByClassName("profile_name"));
+  localStorage.setItem("prof_pic",document.getElementsByClassName("profile_pic"));
   for(var i = 0; i < name.length; i++){
     prof_name[i].innerText=responsePayload.name;   
     prof_pic[i].src=responsePayload.picture;
